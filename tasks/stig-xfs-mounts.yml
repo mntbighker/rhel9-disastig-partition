@@ -107,39 +107,39 @@
     - name: Create xfs filesystem on var
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p5"
+        dev: "{{ vol_drive }}5"
         #force: yes
 
     - name: Create xfsfilesystem on log
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p6"
+        dev: "{{ vol_drive }}6"
         #force: yes
 
     - name: Create xfs filesystem on opt
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p7"
+        dev: "{{ vol_drive }}7"
 
     - name: Create xfs filesystem on audit
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p8"
+        dev: "{{ vol_drive }}8"
         #force: yes
 
     - name: Create xfs filesystem on home
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p9"
+        dev: "{{ vol_drive }}9"
 
     - name: Create xfs filesystem on tmp
       filesystem:
         fstype: "xfs"
-        dev: "{{ vol_drive }}p10"
+        dev: "{{ vol_drive }}10"
 
 ######
     - name: Mount var dir
-      command: "mount {{ vol_drive }}p5 /var"
+      command: "mount {{ vol_drive }}5 /var"
     
     - name: Create var log dir
       file:
@@ -148,7 +148,7 @@
         mode: 0755
 
     - name: Mount log dir
-      command: "mount {{ vol_drive }}p6 /var/log"
+      command: "mount {{ vol_drive }}6 /var/log"
 
     - name: Create var tmp dir
       file:
@@ -157,7 +157,7 @@
         mode: 0755
 
     - name: Mount opt dir
-      command: "mount {{ vol_drive }}p7 /opt"
+      command: "mount {{ vol_drive }}7 /opt"
 
     - name: Create var log audit dir
       file:
@@ -166,13 +166,13 @@
         mode: 0755
 
     - name: Mount audit dir
-      command: "mount {{ vol_drive }}p8 /var/log/audit"
+      command: "mount {{ vol_drive }}8 /var/log/audit"
 
     - name: Mount home dir
-      command: "mount {{ vol_drive }}p9 /home"
+      command: "mount {{ vol_drive }}9 /home"
 
     - name: Mount tmp dir
-      command: "mount {{ vol_drive }}p10 /tmp"
+      command: "mount {{ vol_drive }}10 /tmp"
     
 
 
